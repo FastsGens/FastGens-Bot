@@ -30,7 +30,7 @@ async def on_member_join(ctx, *, member):
 @commands.cooldown(1, 10, commands.BucketType.user)
 async def generate(ctx, arg1):
      async with aiohttp.ClientSession() as session:
-        async with session.get(f'https://discordthemes.tk/api/generate.php?user=yourpass&type={arg1}') as resp:
+        async with session.get(f'https://fastgens.com/api/generate.php?user=yourpass&type={arg1}') as resp:
             await ctx.send(await resp.text())
 
 
